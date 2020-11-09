@@ -33,4 +33,23 @@ public class AccountsManager {
         
         return totalAccount;
     }
+    
+    public boolean transfer(String fromOwnerName, String toOwnerName, int amount){
+       
+        for(BankAccount acc : this.accounts){
+            if (acc.getOwner().equals(toOwnerName)) {
+                for(BankAccount c : this.accounts){
+                    if (c.getOwner().equals(fromOwnerName)) {
+                        int currentFromBalance = c.getBalance();
+                        int currentToBalance = acc.getBalance();
+                       
+                        c.setBalance(currentFromBalance - amount);
+                        acc.setBalance(currentToBalance + amount);
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
 }
