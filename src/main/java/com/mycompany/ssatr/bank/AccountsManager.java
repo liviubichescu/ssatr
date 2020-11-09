@@ -12,9 +12,13 @@ import java.util.ArrayList;
  * @author liviu.bichescu
  */
 public class AccountsManager {  
+
+    ArrayList<BankAccount> accounts; 
     
-    ArrayList<BankAccount> accounts = new ArrayList<BankAccount>(); 
-    
+    public AccountsManager() {
+        this.accounts =  new ArrayList<>();
+    }
+       
     public void addAccount(BankAccount a){
         this.accounts.add(a);
     }
