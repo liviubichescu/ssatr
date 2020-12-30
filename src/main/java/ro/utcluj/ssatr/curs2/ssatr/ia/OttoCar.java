@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ro.utcluj.ssatr.curs2.ssatr.ia;
 
-/**
- *
- * @author mihai.hulea
- */
 public class OttoCar extends Car { //clasa derivata  
 
     
@@ -20,5 +11,4 @@ public class OttoCar extends Car { //clasa derivata
         speed+=3;
         System.out.println("Otto car speed is "+speed);
     }
-    
 }

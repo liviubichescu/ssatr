@@ -5,39 +5,9 @@
  */
 package ro.utcluj.ssatr.curs2.ssatr.ia;
 
-/**
- *
- * @author mihai.hulea
- */
 public class TestCar {
     public static void main(String[] args) {
-       
-        
-//        Car c1 = new Car("BMW", 10);
-//        
-//        c1.accelerate();
-//        
-//        // -> Vehicle speed is 11
-//        
-//        //instantiere obiecte
-//        Car c2 = new Car("BMW", 10);
-//        
-//        c2.accelerate();c2.accelerate();
-//        
-//        // -> Vehicle speed is 12
-//        
-//        
-//        Car c3;        
-//        c3 = new Car("Opel",0);
-//        
-//        // -> Vehicle speed is 0
-//        
-//        c3.accelerate();
-//        
-//        c3 = c1;
-//        c3.accelerate();
-//        c1.accelerate();
-//        
+ 
         // -> Vehicle speed is 3
         
         DieselCar d1 = new DieselCar("Audi", 5, "CJ88AUD");
@@ -49,6 +19,19 @@ public class TestCar {
         Car x1 = new DieselCar("Dacia",1, "CJ77DAC");
         x1.accelerate();
         
+        // --- Test equals for Sensor objects ---
         
+        Sensor engineSpeedSensor1 = new Sensor(20, "Engine");
+        Sensor engineSpeedSensor2 = new Sensor(40, "Engine");
+        
+        if (engineSpeedSensor1.equals(engineSpeedSensor2)) {
+            System.out.println("Both sensor engine are egual!");
+        }
+        
+        Sensor coolantSensor = new Sensor(40, "Coolant");
+        
+        if (engineSpeedSensor1.equals(coolantSensor)) {
+            System.out.println("Compared sensors are not the same!");
+        }
     }
 }
